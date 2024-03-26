@@ -1,0 +1,1 @@
+Treina um modelo para checar se o composto é solúvel ou não. Os dados não são reais, só servem para entender o conceito de machine learning.
