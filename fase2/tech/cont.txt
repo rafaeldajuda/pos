@@ -1,0 +1,86 @@
+import random
+
+# Definindo as peças de carne (valor, peso, volume)
+meat_pieces = [
+    (100, 5, 0.1), (200, 10, 0.2), (150, 8, 0.15), (180, 9, 0.18), (90, 4, 0.08),
+    (60, 3, 0.05), (120, 6, 0.12), (140, 7, 0.13), (110, 5.5, 0.11), (130, 6.5, 0.14)
+]
+
+# Definindo parâmetros para o algoritmo genético
+population_size = 25
+num_generations = 100
+max_weight = 27000  # Capacidade máxima de peso do contêiner em kg
+max_volume = 28000  # Capacidade máxima de volume do contêiner em litros
+
+mutation_rate = 0.01  # Probabilidade de mutação
+
+# Função para calcular a aptidão de um indivíduo (valor total das peças de carne selecionadas)
+def calculate_fitness(individual):
+    total_value = 0
+    total_weight = 0
+    total_volume = 0
+    for i in range(len(individual)):
+        if individual[i] == 1:
+            total_value += meat_pieces[i][0]
+            total_weight += meat_pieces[i][1]
+            total_volume += meat_pieces[i][2]
+    if total_weight > max_weight or total_volume > max_volume:
+        return 0  # Solução inválida se exceder a capacidade de peso ou volume
+    return total_value
+
+# Gera uma população aleatória de indivíduos
+def generate_random_population(size):
+    return [[random.randint(0, 1) for _ in range(len(meat_pieces))] for _ in range(size)]
+
+# Realiza crossover de um ponto
+def crossover(parent1, parent2):
+    crossover_point = random.randint(1, len(meat_pieces) - 1)
+    child1 = parent1[:crossover_point] + parent2[crossover_point:]
+    child2 = parent2[:crossover_point] + parent1[crossover_point:]
+    return child1, child2
+
+def mutate(individual):
+    mutated_individual = individual[:]
+    for i in range(len(individual)):
+        if random.random() < mutation_rate:
+            mutated_individual[i] = mutation_rate * mutated_individual[i]
+    return mutated_individual
+
+if __name__ == '__main__':
+    # Loop principal do algoritmo genético
+    population = generate_random_population(population_size)
+    
+    # Listas para armazenar a melhor aptidão e geração para plotagem
+    best_fitness_values = []
+    best_individuals = []
+    
+    for generation in range(num_generations):
+        population = sorted(population, key=calculate_fitness, reverse=True)
+    
+        best_fitness = calculate_fitness(population[0])
+        best_individual = population[0]
+        best_fitness_values.append(best_fitness)
+        best_individuals.append(best_individual)
+    
+        print(f"Geração {generation}: Melhor aptidão = {best_fitness}, Melhor indivíduo = {best_individual}")
+    
+        new_population = [population[0]]  # Mantém o melhor indivíduo
+        while len(new_population) < population_size:
+            parent1, parent2 = random.choices(population[:10], k=2)  # Seleciona pais dos 10 melhores indivíduos
+            child1, child2 = crossover(parent1, parent2)
+            child1 = mutate(child1)
+            child2 = mutate(child2)
+            new_population.extend([child1, child2])
+    
+        population = new_population[:population_size]
+    
+    # Imprime a melhor solução encontrada
+    best_individual = population[0]
+    best_value = calculate_fitness(best_individual)
+    total_weight = sum(meat_pieces[i][1] for i in range(len(best_individual)) if best_individual[i] == 1)
+    total_volume = sum(meat_pieces[i][2] for i in range(len(best_individual)) if best_individual[i] == 1)
+    
+    print(f"Melhor Indivíduo: {best_individual}")
+    print(f"Valor Total: {best_value}")
+    print(f"Peso Total: {total_weight} kg")
+    print(f"Volume Total: {total_volume} litros")
