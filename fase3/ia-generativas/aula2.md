@@ -54,3 +54,59 @@ Que tal aprender na prática como funciona um modelo de deep learning? Nessas au
 ![imagem](./img/fase3_ia_aula2_17.png)
 
 ![imagem](./img/fase3_ia_aula2_18.png)
+
+## Funções de ativações
+
+![imagem](./img/fase3_ia_aula2_19.png)
+
+O objetivo de uma função de ativação é realizar a **transformação não linear** dos neurônios, aliás uma rede neural sem a função de ativação é essencialmente um modelo de regressão linear.
+
+A função de ativação permite que as mudanças realizadas nos pesos e bias causam uma alteração na saída final do modelo (output).
+
+### Sigmóide
+
+![imagem](./img/fase3_ia_aula2_20.png)
+
+### Tangente hiperbólica (tanh)
+
+![imagem](./img/fase3_ia_aula2_21.png)
+
+### ReLU (unidade linear retificada)
+
+![imagem](./img/fase3_ia_aula2_22.png)
+
+### Leaky ReLU
+
+![imagem](./img/fase3_ia_aula2_23.png)
+
+### Softmax
+
+![imagem](./img/fase3_ia_aula2_24.png)
+
+## Gradiente descendente
+
+A descida do gradiente é um algoritmo de otimização para encontrar os valores de parâmetros (pesos) de uma função que minimizar uma função de custo.
+
+![imagem](./img/fase3_ia_aula2_25.png)
+
+Pensando na questão de matemática por trás dos gradientes, podemos dizer que o gradiente descendente é a **derivada da função do erro** em relação a nosso peso.
+
+![imagem](./img/fase3_ia_aula2_26.png)
+
+## Taxa de aprendizagem
+
+Taxa de aprendizagem controla o tamanho do passo em cada iteração.
+
+![imagem](./img/fase3_ia_aula2_27.png)
+
+## Tipos de gradiente
+
+**Momentum:** O Momentum é uma técnica que visa melhorar o desempenho do Gradiente Descendente, adicionando um componente de inércia ao algoritmo. Isso significa que as atualizações dos parâmetros consideram não apenas o gradiente atual, mas também as atualizações anteriores.
+
+**AdaGrad (Adaptive Gradient):** O AdaGrad é um algoritmo que ajusta automaticamente o passo de aprendizagem para cada parâmetro do modelo. Isso significa que os parâmetros com gradientes mais suaves recebem passos de aprendizagem menores, enquanto os parâmetros com gradientes mais acentuados recebem passos maiores.
+
+**Adaptative moment estimation (Adam):** Combina as ideia do Momentum e do RMSProp: assim como a otimização de momentum, o Adam acompanha uma média exponencialmente decadente de gradientes passados, e assim como o RMSProp, controla um média exponencialmente decadente de gradiente quadrados passados.
+
+O otimizador Adam requer menos configurações de hiperparâmetros da taxa de aprendizagem, então um valor padrão n=0,001 pode ser uma boa opção.
+
+![imagem](./img/fase3_ia_aula2_28.png)
