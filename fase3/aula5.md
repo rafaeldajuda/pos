@@ -1,1 +1,0 @@
-# FASE 3 - IA GENERATIVAS -
