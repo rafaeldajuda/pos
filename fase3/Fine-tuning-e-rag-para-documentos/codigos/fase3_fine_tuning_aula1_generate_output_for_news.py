@@ -18,7 +18,7 @@ import requests
 import json
 from openai import OpenAI
 # Substitua 'your_openai_api_key' pela sua chave de API da OpenAI
-client = OpenAI(api_key='sk-7e07-aG2FxRLd9CTTBpYLaQEdF1ogzGlmKjvXo083yT3BlbkFJDrQR0rsLoQRrHVOzIbP3K5G68FsmN3sBpXgnMMtXMA')
+client = OpenAI(api_key='*********')
 
 import time
 
