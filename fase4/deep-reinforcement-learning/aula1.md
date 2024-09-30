@@ -1,9 +1,0 @@
-# FASE 3 - DEEP & REINFORCEMENT LEARNING - PERCEPTRON DE MÚLTIPLAS CAMADAS
-
-A natureza inspirou muitas criações para os seres humanos, tais como as aves nos inspiraram a voar com os aviões, a planta bardana inspirou a criação do velcro e o cérebro humano inspirou a criação das chamadas redes neurais artificiais (RNA), consideradas como aprendizado profundo. As redes neurais artificiais são poderosas e escaláveis, sendo muito utilizadas para lidar com grandes tarefas altamente complexas do aprendizado de máquina, tais como classificação de imagens, reconhecimento de fala, criação de imagens, chats poderosos e até mesmo aprender a jogar videogames. Nessa aula, você aprenderá como funcionam as redes neurais, incluindo a arquitetura da rede neural de múltiplas camadas (Multilayer Perceptron). Vamos lá? 
-
-Não iremos apenas entender o funcionamento das redes multicamadas, vamos aprender, na prática, com Python, como ela funciona e toda a sua arquitetura!  Utilizaremos a aplicação da rede usando a biblioteca do Keras. Tenho certeza que você usufrui de diversos recursos no seu dia a dia que utilizam a biblioteca Keras, tais como YouTube, Netflix, Uber, Yelp, Instacart, Zocdoc, Twitter, Square/Block e muitos outros.  Na pesquisa de 2022 "State of Data Science and Machine Learning" da Kaggle, Keras teve uma taxa de adesão de 61% entre as pessoas cientistas de dados. Vamos para o hands-on?
-
-O código desta aula você encontra aqui: https://github.com/FIAP/Pos_Tech_DTAT/blob/0cc151da81216e9050cdd3b6dec13adb15093b00/Aula%201%20-%20Perceptron%20de%20m%C3%BAltiplas%20camadas/Multilayer_Perceptron_Classificando_sementes_de_ab%C3%B3bora.ipynb
-
-A base de dados utilizada nas aulas também está disponível: https://github.com/FIAP/Pos_Tech_DTAT/blob/0cc151da81216e9050cdd3b6dec13adb15093b00/Aula%201%20-%20Perceptron%20de%20m%C3%BAltiplas%20camadas/SementesAbobora.xlsx
