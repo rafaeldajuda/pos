@@ -1,4 +1,4 @@
-# FASE 4 - ANALISE VDEIO AUDIO TEXTO - RECONHECIMENTO FACIAL
+# FASE 4 - ANALISE VIDEO AUDIO TEXTO - RECONHECIMENTO FACIAL
 
 Nesta aula, você aprenderá sobre o conceito de reconhecimento facial na área de visão computacional. Exploraremos os arquivos Haarcascades e sua importância para o reconhecimento facial. Em seguida, implementaremos um projeto prático de reconhecimento facial usando a webcam. Para isso, utilizaremos a linguagem de programação Python e a biblioteca face_recognition.
 
