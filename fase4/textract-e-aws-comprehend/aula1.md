@@ -52,6 +52,30 @@ Este fluxo de trabalho automatiza o processamento de documentos carregados no S3
 
 **Bucket** no Amazon S3 é como uma pasta na nuvem onde você aramazena seus arquivos, como documentos, imagens, vídeos, etc. Cada bucket tem um nome único e é usado para organizar e gerenciar seus dados dentro do Amazon S3.
 
+1. Para criar um Bucket:
+
+    ![img](./img/fase4_textract_comprehend_1_2.png)
+
+    ![img](./img/fase4_textract_comprehend_1_3.png)
+
+    ![img](./img/fase4_textract_comprehend_1_4.png)
+
+    ![img](./img/fase4_textract_comprehend_1_5.png)
+
+    ![img](./img/fase4_textract_comprehend_1_6.png)
+
+    ![img](./img/fase4_textract_comprehend_1_7.png)
+
+    ![img](./img/fase4_textract_comprehend_1_8.png)
+
+    ![img](./img/fase4_textract_comprehend_1_9.png)
+
+    ![img](./img/fase4_textract_comprehend_1_10.png)
+
 # MATERIAL COMPLEMENTAR
 
 * https://github.com/FIAP/IADT-AWS-TEXTRACT
+
+* https://us-east-2.console.aws.amazon.com/textract/home?region=us-east-2#/
+
+* https://us-east-2.console.aws.amazon.com/comprehend/home?region=us-east-2#welcome
