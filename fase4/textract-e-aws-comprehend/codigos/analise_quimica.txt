@@ -1,0 +1,13 @@
+Relatório de Análise Química
+Amostra: Água do Rio
+Componente: Nitrato
+Concentração: 10 mg/L
+Data da Coleta: 01/01/2024
+Amostra: Solo Agrícola
+Componente: Fósforo
+Concentração: 20 mg/kg
+Data da Coleta: 15/02/2024
+Amostra: Água Potável
+Componente: Cloro
+Concentração: 5 mg/L
+Data da Coleta: 20/03/2024
